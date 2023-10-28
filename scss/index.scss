@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background-color: #efefef;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.wrapper {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #333;
+    color: #fdfdfd;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0px;
+
+        .nav {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            width: 60vw;
+
+            li {
+                width: 10vw;
+                display: flex;
+                justify-content: end;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.main-body {
+    padding: 20px 0px;
+    // min-height: calc(100vh - 95px);
+    // if you add calc() method then remove position: absolute on footer; and remove position relative on body
+    // calc() not supported most of the browsers
+}
+
+.footer {
+    background-color: #333;
+    color: #fdfdfd;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 0px;
+    }
+}
